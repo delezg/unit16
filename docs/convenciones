@@ -56,11 +56,11 @@ Son cuatro:
 
 Ventajas del túnel local
 
-- Permite asegurar el primer tramo, que suele ser el más peligroso
+- Permite asegurar el primer tramo, que suele ser el más peligroso.
 - Para el servidor, las peticiones vienen desde el proxy, no desde la
-máquina local. Esto es de utilidad 
+máquina local. Esto es de utilidad
 
-    - Si se trata de un servicio vinculado a la IP del cliente, 
+    - Si se trata de un servicio vinculado a la IP del cliente.
     - Para evitar cortafuegos, censura, etc
     - Burlar restricciones en la red del cliente
 
