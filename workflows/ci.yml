@@ -4,12 +4,27 @@ on: [push, pull_request]
 
 jobs:
   build:
-    runs-on: Windows-latest
+    runs-on: windows-latest
 
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v2
+
+      - name: Que se duerma el proceso
+        run: sleep 4
+
+      - name: A que hora ha terminado el despliegue chicos / as
+        run: date
+
+      - name: Quiero ver si mi página funciona
+        run: curl -k "https://as.com"
+
+      - name: Y ahora quiero saber con que version de git estoy trabajando
+        run: git version
+
+      - name: Y despedida de clase
+        run: echo "que tengais buen finde, que os regalen muchas cosas, que sois muy buena gente"
 
     - name: Compile contracts
-      run: |
+      run: Compilemos
         npx solcjs --bin --abi --include-path node_modules/ --base-path . -o build contracts/HolaMundo.sol
+        
+
