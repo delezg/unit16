@@ -1,0 +1,18 @@
+name: Compile Solidity Contracts
+
+on: [push, pull_request]
+
+jobs:
+  build:
+    runs-on: Windows-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Install dependencies
+      run: npm install solc
+
+    - name: Compile contracts
+      run: |
+        npx solcjs --bin --abi --include-path node_modules/ --base-path . -o build contracts/HolaMundo.sol
